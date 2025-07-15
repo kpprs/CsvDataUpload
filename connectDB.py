@@ -15,9 +15,9 @@ def connectDB(Prod, logger):
     if boolProd:
         ##opret forbindelse til Prod-DB
         logger.info('Forbinder til Prod-DB')
-        server = r'fiskk2003-prod.sql.kk.dk\instans10'
-        database = 'FISKK2003-KFF_RobotSQL'
-        table = 'dbo.[KFF.BoernogData.IMS]' 
+        server = r'ServerName'
+        database = 'DatabaseName'
+        table = 'dbo.[TableName]' 
         conn_str = (
             'DRIVER=SQL Server;'
             f'SERVER={server};'
@@ -30,7 +30,7 @@ def connectDB(Prod, logger):
         ##opret forbindelse til test-DB
         logger.info('Forbinder til test-DB')
         server = None
-        table = 'IntMat'
+        table = 'CsvData'
         database = 'Python_IMS_SQL.sqlite'
         conn = sqlite3.connect(database)
         cur = conn.cursor()
